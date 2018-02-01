@@ -10,7 +10,8 @@ body {
 #myVideo {
     position: fixed;
     right: 0;
-    bottom: 0;
+    top: 0;
+    display: cover;
     min-width: 100%; 
     min-height: 100%;
     z-index: 1;
@@ -41,10 +42,9 @@ body {
 <body> 
 
 <a href="choice1.html">
-	<div class="play">PLAY</div>
-  <iframe style="display:cover" loop autoplay id="myVideo"
-src="https://www.youtube.com/watch?v=XQ7z57qrZU8">
-</iframe>
+	<div class="play">PLAY</div></a>
+
+<iframe src="https://player.vimeo.com/video/79104847?autoplay=1&loop=1" width="2000" height="1638" frameborder="0" ></iframe>
 
 
 <script type="text/javascript">
