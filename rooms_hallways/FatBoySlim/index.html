@@ -20,7 +20,7 @@ body {
 
 
 .this {
-    position: absolute;
+    position: fixed;
     left: 40%;
     top: 50%;
     width: 5%;
@@ -67,7 +67,7 @@ body {
 }
 
 .that {
-    position: absolute;
+    position: fixed;
     left: 60%;
     top: 50%;
     width: 5%;
@@ -254,24 +254,23 @@ body {
 <div id="second2" class="two">2</div>
 <div id="second1" class="one">1</div>
 
-<a href="choice2.html" class="right">
+<a href="choice2.html">
     <div class="this"></div>
 </a>
 <a href="1_1This.html">
     <div class="that"></div>
 </a>
 
-<video loop autoplay id="myVideo">
-  <source src="clips/Choice1.mp4" type="video/mp4">
-  	Your browser does not support the video tag.
-</video>
+<div class="choice1">
+  <video loop autoplay id="myVideo">
+    <source src="clips/Choice1.mp4" type="video/mp4">
+    	Your browser does not support the video tag.
+  </video>
+</div>
 
 
 <script type="text/javascript">
     document.getElementById("myVideo").delay(3500).currentTime = 0;
-
-
-
 </script>
 </body> 
 </html>
