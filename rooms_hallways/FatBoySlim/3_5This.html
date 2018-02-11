@@ -2,294 +2,47 @@
 <html> 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<link rel='stylesheet' type='text/css' href="stylesheet3.css">
+
+<title>Choice</title>
+
 <style>
-body {
-    margin: 0;
-}
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-}
-
-
-#this1 {
-position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#this1:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-#this3 {
-position: absolute;
-	left: 30%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#this3:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-
-#this7 {
-position: absolute;
-	left: 70%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#this7:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-#this9 {
-position: absolute;
-	left: 90%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#this9:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-#that2 {
-position: absolute;
-	left: 20%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#that2:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-#that4 {
-position: absolute;
-	left: 40%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#that4:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-#that6 {
-position: absolute;
-	left: 60%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#that6:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-#that8 {
-position: absolute;
-	left: 80%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#that8:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
-
-#choice3 {
-position: absolute;
-	left: 10%;
-	top: 50%;
-	width: 2%;
-	height: 2%;
-	display: block;
-	color: tomato;
-	font-family: open-sans;
-	font-weight: bolder;
-	font-family: sans-serif;
-	z-index: 10;
-	font-size: 12px;
-	text-align: center;
-/*	background-color: black;*/
-	border-radius: 50px;
-	border: 5px solid tomato;
-	box-shadow: black 15px;
-	padding-top: 15px;
-}
-#choice3:hover {
-		background-color: tomato;
-		transition: ease-in-out .3s;
-        width: 3%;
-		height: 4%;
-}
 </style>
+
 </head>
 
 <body> 
 
-<a href="3_1This.html">
-	<div id="this1"></div></a>
+<a href="3_2That.html">
+	<div class="that2"></div></a>
 
 <a href="3_2That.html">
-	<div id="that2"></div></a>
+	<div class="this1"></div></a>
 
 <a href="3_3This.html">
-	<div id="this3"></div></a>
+	<div class="this3"></div></a>
 
 <a href="3_4That.html">
-	<div id="that4"></div></a>
+	<div class="that4"></div></a>
+
+<a href="3_5This.html">
+	<div class="this5"></div></a>
 
 <a href="3_6That.html">
-	<div id="that6"></div></a>
+	<div class="that6"></div></a>
 
 <a href="3_7This.html">
-	<div id="this7"></div></a>
+	<div class="this7"></div></a>
 
 <a href="3_8That.html">
-	<div id="that8"></div></a>
+	<div class="that8"></div></a>
 
 <a href="3_9This.html">
-	<div id="this9"></div></a>
+	<div class="this9"></div></a>
 
 <a href="choice3.html" target="_blank">
-	<div id="choice3"></div></a>
-
+	<div class="choice3"></div></a>
 
 
 <video style="display:cover" loop autoplay id="myVideo">
@@ -301,6 +54,42 @@ position: absolute;
 <script type="text/javascript">
     document.getElementById("myVideo").currentTime = 0;
 
+    document.onbeforeunload = function() { opener.close(); }
+
+
+	   $(document).ready(function(){
+	    animateDiv('.that2');
+	    animateDiv('.this1');
+	    animateDiv('.this3');
+	    animateDiv('.this5');
+	    animateDiv('.that4');
+	    animateDiv('.that6');
+	    animateDiv('.this7');
+	    animateDiv('.that8');
+	    animateDiv('.this9');
+	    animateDiv('.choice3');
+	});
+
+	function makeNewPosition(){
+	    
+	    // Get viewport dimensions (remove the dimension of the div)
+	    var h = $(window).height() - 50;
+	    var w = $(window).width() - 50;
+	    
+	    var nh = Math.floor(Math.random() * h);
+	    var nw = Math.floor(Math.random() * w);
+	    
+	    return [nh,nw];    
+	    
+	}
+
+	function animateDiv(myclass){
+	    var newq = makeNewPosition();
+	    $(myclass).animate({ top: newq[0], left: newq[1] }, 1700,   function(){
+	      animateDiv(myclass);        
+	    });
+	    
+	};
 </script>
 </body> 
 </html>
