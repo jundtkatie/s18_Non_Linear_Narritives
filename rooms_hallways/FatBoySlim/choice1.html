@@ -93,7 +93,7 @@ body {
 <script type="text/javascript">
     // document.getElementById("myVideo").delay(3500).currentTime = 0;
     
-    document.onbeforeunload = function() { opener.close(); }
+    window.onbeforeunload = function() { opener.close(); }
 
 </script>
 </body> 

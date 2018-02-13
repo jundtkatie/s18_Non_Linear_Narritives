@@ -94,7 +94,7 @@ body {
 <script type="text/javascript">
     document.getElementById("myVideo").currentTime = 0;
 
-    document.onbeforeunload = function() { opener.close(); }
+    window.onbeforeunload = function() { opener.close(); }
 
 </script>
 </body> 

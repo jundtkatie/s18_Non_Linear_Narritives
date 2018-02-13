@@ -122,7 +122,7 @@ body {
     padding-left: 32%;
     padding-bottom: 100%;
     background-color: black;
-    color: magenta;
+    color: orangered;
     font-size: 800px;
     display: show;
 
@@ -164,7 +164,7 @@ body {
     padding-left: 32%;
     padding-bottom: 100%;
     background-color: black;
-    color: magenta;
+    color: orangered;
     font-size: 800px;
     display: show;
     -webkit-animation: seconds 1.0s forwards;
@@ -204,7 +204,7 @@ body {
     min-height: 100%;
     z-index: 300;
     background-color: black;
-    color: magenta;
+    color: orangered;
     font-size: 800px;
     display: cover;
     min-width: 100%; 
@@ -272,7 +272,7 @@ body {
 <script type="text/javascript">
     document.getElementById("myVideo").delay(3500).currentTime = 0;
 
-    document.onbeforeunload = function() { opener.close(); }
+    window.onbeforeunload = function() { opener.close(); }
 </script>
 </body> 
 </html>

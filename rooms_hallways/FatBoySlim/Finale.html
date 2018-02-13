@@ -19,10 +19,10 @@ body {
 
 .index {
     position: absolute;
-    left: 50%;
+    left: 35%;
     top: 50%;
     display: block;
-    color: tomato;
+    color: orangered;
     font-family: open-sans;
     font-weight: bolder;
     font-family: sans-serif;
@@ -33,10 +33,40 @@ body {
     padding-top: 15px;
 }
 .index:hover {
-        color: magenta;
+        color: tomato;
+        transition: ease-in-out .3s;
+        text-decoration: underline;
+}
+
+.about {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: block;
+    color: orangered;
+    font-family: open-sans;
+    font-weight: bolder;
+    font-family: sans-serif;
+    z-index: 10;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50px;
+    padding-top: 15px;
+}
+.about:hover {
+        color: tomato;
+        text-decoration: underline;
         transition: ease-in-out .3s;
 }
 
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: 1;
+}
 
 </style>
 
@@ -59,7 +89,14 @@ body {
 	<div class="index">Play again?</div>
 </a>
 
-<iframe src="https://player.vimeo.com/video/79104847?autoplay=1#t=03m31s" width="2000" height="1638" frameborder="0" ></iframe>
+<a href="clips/structure.jpg">
+    <div class="about">About</div>
+</a>
+
+<video style="display:cover"  autoplay id="myVideo">
+  <source src="clips/finale.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 
 
