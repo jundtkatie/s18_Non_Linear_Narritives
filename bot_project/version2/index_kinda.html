@@ -1,0 +1,514 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="skrollr.stylesheets.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<link rel="stylesheet" href="main.css">
+
+<title>Obvious Ideas</title>
+
+<style>
+html, body {
+width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    overflow-x:hidden;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  background: #FF4136;
+/*    background-color: #FDA19E;
+*/}
+ 
+.wrap {
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  justify-content: center;
+  position: relative;
+}
+
+ 
+article {
+    overflow-y: scroll;
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: auto;
+    width: 33%;
+    padding: 1%;
+}
+
+/*.Loop {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+*/
+/*section:first-child {
+    padding-top: 100%;
+}*/
+section {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  height: 100vh;
+  text-align: center;
+  margin: auto;
+  width: 33%;
+    padding: 1%;
+}
+
+::scrollbar {
+  display: none;
+}
+
+.group3 {
+  color: white;
+}
+
+.group2 {
+  color: white;
+}
+
+.group1 {
+  color: white;
+  float: left;
+}
+
+
+h2 {
+    font-size: .8em;
+    color: #fff;
+    text-align: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 2px solid #40100E;
+    box-shadow: 5px 10px #40100E;
+    padding: 15px;
+    background-color: #DF392F;
+}
+
+h1 {
+    position: fixed;
+    left: 65px;
+    bottom: 16px;
+    font-size: 0.3em;
+    color: #BF3129;
+}
+
+.twitter-follow-button img {
+    position: fixed;
+    width: 30px;
+    left: 20px;
+    bottom: 20px;
+}
+
+/*#bar1 {
+    height: 75vh;
+    width: 1px;
+    position: fixed;
+    left: 33%;
+    top: 12.5vh;
+    background-color: #9F2922;
+        margin: 15px;
+}
+
+#bar2 {
+    height: 75vh;
+    width: 1px;
+    position: fixed;
+    right: 33%;
+    top: 12.5vh;
+    background-color: #9F2922;
+    margin: 15px;
+}
+
+
+
+.skrollable {
+    /*
+     * First-level skrollables are positioned relative to window
+     */
+    position:fixed;
+
+    /*
+     * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+     */
+    z-index:100;
+}
+
+.skrollr-mobile .skrollable {
+    /*
+        May cause issues on Android default browser (see #331 on GitHub).
+    */
+    position:absolute;
+}
+
+.skrollable .skrollable {
+    /*
+     * Second-level skrollables are positioned relative their parent skrollable
+     */
+    position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+    /*
+     * Third-level (and below) skrollables are positioned static
+     */
+    position:static;
+}
+</style>
+
+</head>
+
+<body> 
+    <h1>It's not hard to come up with obvious ideas.</h1>
+    
+    <a href="https://twitter.com/obviousideas?ref_src=twsrc%5Etfw" class="twitter-follow-button" target="_blank"><img src="twitter.svg"></a>
+   
+    <div class="wrap">
+        <article class="group1">
+                <section class="group1" data-0="top:50%;"  data-200="top: 50%;" data-800="top:30%" data-1000="top: -10%;">
+                    <h2>a coffee table</h2>
+                </section>
+                <section class="group1" data-1001="top:101%;"  data-1200="top: 50%;" data-1800="top:50%" data-2000="top: -10%;">
+                    <h2>an art show</h2>
+                </section>
+                <section class="group1" data-2001="top:101%;"  data-2200="top: 50%;" data-2800="top:50%" data-3000="top: -10%;">
+                    <h2>a painting</h2>
+                </section>
+                <section class="group1" data-3001="top:101%;"  data-3200="top: 50%;" data-3800="top:50%" data-4000="top: -10%;">
+                    <h2>a series of abstract paintings</h2>
+                </section>
+                <section class="group1" data-4001="top:101%;"  data-4200="top: 50%;" data-4800="top:50%" data-5000="top: -10%;">
+                    <h2>salt and pepper shakers</h2>
+                </section>
+                <section class="group1" data-5001="top:101%;"  data-5200="top: 50%;" data-5800="top:50%" data-6000="top: -10%;">
+                    <h2>a webcam based sex website</h2>
+                </section>
+                <section class="group1" data-6001="top:101%;"  data-6200="top: 50%;" data-6800="top:50%" data-7000="top: -10%;">
+                    <h2>a real estate agency </h2>
+                </section>
+                <section class="group1" data-7001="top:101%;"  data-7200="top: 50%;" data-7800="top:50%" data-8000="top: -10%;">
+                    <h2>a cafe slash co working space </h2>
+                </section>
+                <section class="group1" data-8001="top:101%;"  data-8200="top: 50%;" data-8800="top:50%" data-9000="top: -10%;">
+                    <h2>a baseball hat</h2>
+                </section>
+                <section class="group1" data-9001="top:101%;"  data-9200="top: 50%;" data-9800="top:50%" data-10000="top: -10%;">
+                    <h2>a Little Caesars</h2>
+                </section>
+                <section class="group1" data-10001="top:101%;"  data-10200="top: 50%;" data-10800="top:50%" data-11000="top: -10%;">
+                    <h2>a t-shirt</h2>
+                </section>
+                <section class="group1" data-11001="top:101%;"  data-11200="top: 50%;" data-11800="top:50%" data-12000="top: -10%;">
+                    <h2>a sportswear line</h2>
+                </section>
+                <section class="group1" data-12001="top:101%;"  data-12200="top: 50%;" data-12800="top:50%" data-13000="top: -10%;">
+                    <h2>a monitor stand</h2>
+                </section>
+                <section class="group1" data-13001="top:101%;"  data-13200="top: 50%;" data-13800="top:50%" data-14000="top: -10%;">
+                    <h2>drugs</h2>
+                </section>
+                <section class="group1" data-14001="top:101%;"  data-14200="top: 50%;" data-14800="top:50%" data-15000="top: -10%;">
+                    <h2>black and white portraits</h2>
+                </section>
+                <section class="group1" data-15001="top:101%;"  data-15200="top: 50%;" data-15800="top:50%" data-16000="top: -10%;">
+                    <h2>a band</h2>
+                </section>
+                <section class="group1" data-16001="top:101%;"  data-16200="top: 50%;" data-16800="top:50%" data-17000="top: -10%;">
+                    <h2>a 20 foot painting</h2>
+                </section>
+                <section class="group1" data-17001="top:101%;"  data-17200="top: 50%;" data-17800="top:50%" data-18000="top: -10%;">
+                    <h2>a selfie website</h2>
+                </section>
+                <section class="group1" data-18001="top:101%;"  data-18200="top: 50%;" data-18800="top:50%" data-19000="top: -10%;">
+                    <h2>an antiselfie website</h2>
+                </section>
+                <section class="group1" data-19001="top:101%;"  data-19200="top: 50%;" data-19800="top:50%" data-20000="top: -10%;">
+                    <h2>a poem</h2>
+                </section>
+                <section class="group1" data-20001="top:101%;"  data-20200="top: 50%;" data-20800="top:50%" data-21000="top: -10%;">
+                    <h2>a custom gold name plate necklace</h2>
+                </section>
+                <section class="group1" data-21001="top:101%;"  data-21200="top: 50%;" data-21800="top:50%" data-22000="top: -10%;">
+                    <h2>your wifi network</h2>
+                </section>
+                <section class="group1" data-22001="top:101%;"  data-22200="top: 50%;" data-22800="top:50%" data-23000="top: -10%;">
+                    <h2>paintings of anime characters</h2>
+                </section>
+                <section class="group1" data-23001="top:101%;"  data-23200="top: 50%;" data-23800="top:50%" data-24000="top: -10%;">
+                    <h2>paintings of hollywood movie stars</h2>
+                </section>
+                <section class="group1" data-24001="top:101%;"  data-24200="top: 50%;" data-24800="top:50%" data-25000="top: -10%;">
+                    <h2>an instagram curator</h2>
+                </section>
+                <section class="group1" data-25001="top:101%;"  data-25200="top: 50%;" data-25800="top:50%" data-26000="top: -10%;">
+                    <h2>a real-time graph</h2>
+                </section>
+                <section class="group1" data-26001="top:101%;"  data-26200="top: 50%;" data-26800="top:50%" data-27000="top: -10%;">
+                    <h2>pinkberry uniforms</h2>
+                </section>
+                <section class="group1" data-27001="top:101%;"  data-27200="top: 50%;" data-27800="top:50%" data-28000="top: -10%;">
+                    <h2>a lawn chair</h2>
+                </section>
+                <section class="group1" data-28001="top:101%;"  data-28200="top: 50%;" data-28800="top:50%" data-29000="top: -10%;">
+                    <h2>gloves where each finger is like one of the weed leafs</h2>
+                </section>
+                <section class="group1" data-29001="top:101%;"  data-29200="top: 50%;" data-29800="top:50%" data-30000="top: -10%;">
+                    <h2>an interpretive dance</h2>
+                </section>
+                <section class="group1" data-30001="top:101%;"  data-30200="top: 50%;" data-30800="top:50%" data-31000="top: -10%;">
+                    <h2>a flipbook</h2>
+                </section>
+                <section class="group1" data-31001="top:101%;"  data-31200="top: 50%;" data-31800="top:50%" data-32000="top: -10%;">
+                    <h2>a bottle of axe</h2>
+                </section>
+                <section class="group1" data-32001="top:101%;"  data-32200="top: 50%;" data-32800="top:50%" data-33000="top: -10%;">
+                    <h2>a mean people suck sticker</h2>
+                </section>
+                <section class="group1" data-34001="top:101%;"  data-34200="top: 50%;" data-34800="top:50%" data-35000="top: -10%;">
+                    <h2>a pop up shop</h2>
+                </section>
+                <section class="group1" data-35001="top:101%;"  data-35200="top: 50%;" data-35800="top:50%" data-36000="top: -10%;">
+                    <h2>a fake street artist</h2>
+                </section>
+
+        </article>
+     
+
+        <article class="Loop group2 js-loop">
+                <section class="group2" data-0="top:50%;"  data-200="top: 50%;" data-800="top:30%" data-1000="top: -10%;">
+                    <h2>of denim bean bags</h2>
+                </section>
+                <section class="group2" data-1001="top:101%;"  data-1200="top: 50%;" data-1800="top:50%" data-2000="top: -10%;">
+                    <h2>of bongs</h2>
+                </section>
+                <section class="group2" data-2001="top:101%;"  data-2200="top: 50%;" data-2800="top:50%" data-3000="top: -10%;">
+                    <h2>of a giant usb symbol</h2>
+                </section>
+                <section class="group2" data-3001="top:101%;"  data-3200="top: 50%;" data-3800="top:50%" data-4000="top: -10%;">
+                    <h2>mimicking Rothko</h2>
+                </section>
+                <section class="group2" data-4001="top:101%;"  data-4200="top: 50%;" data-4800="top:50%" data-5000="top: -10%;">
+                    <h2>cast in yellow resin</h2>
+                </section>
+                <section class="group2" data-5001="top:101%;"  data-5200="top: 50%;" data-5800="top:50%" data-6000="top: -10%;">
+                    <h2>of party photographers</h2>
+                </section>
+                <section class="group2" data-6001="top:101%;"  data-6200="top: 50%;" data-6800="top:50%" data-7000="top: -10%;">
+                    <h2>involving stedicams</h2>
+                </section>
+                <section class="group2" data-7001="top:101%;"  data-7200="top: 50%;" data-7800="top:50%" data-8000="top: -10%;">
+                    <h2>of internet loader gifs</h2>
+                </section>
+                <section class="group2" data-8001="top:101%;"  data-8200="top: 50%;" data-8800="top:50%" data-9000="top: -10%;">
+                    <h2>of cables</h2>
+                </section>
+                <section class="group2" data-9001="top:101%;"  data-9200="top: 50%;" data-9800="top:50%" data-10000="top: -10%;">
+                    <h2>cut up and mixed</h2>
+                </section>
+                <section class="group2" data-10001="top:101%;"  data-10200="top: 50%;" data-10800="top:50%" data-11000="top: -10%;">
+                    <h2>cast in plaster</h2>
+                </section>
+                <section class="group2" data-11001="top:101%;"  data-11200="top: 50%;" data-11800="top:50%" data-12000="top: -10%;">
+                    <h2>made out of resin</h2>
+                </section>
+                <section class="group2" data-12001="top:101%;"  data-12200="top: 50%;" data-12800="top:50%" data-13000="top: -10%;">
+                    <h2>with various bank logos and stock photos of landscapes</h2>
+                </section>
+                <section class="group2" data-13001="top:101%;"  data-13200="top: 50%;" data-13800="top:50%" data-14000="top: -10%;">
+                    <h2>with grumpy cat on it</h2>
+                </section>
+                <section class="group2" data-14001="top:101%;"  data-14200="top: 50%;" data-14800="top:50%" data-15000="top: -10%;">
+                    <h2>that sells hand crafted jewelry</h2>
+                </section>
+                <section class="group2" data-15001="top:101%;"  data-15200="top: 50%;" data-15800="top:50%" data-16000="top: -10%;">
+                    <h2>f the price of bitcoins</h2>
+                </section>
+                <section class="group2" data-16001="top:101%;"  data-16200="top: 50%;" data-16800="top:50%" data-17000="top: -10%;">
+                    <h2>of chester cheeto</h2>
+                </section>
+                <section class="group2" data-17001="top:101%;"  data-17200="top: 50%;" data-17800="top:50%" data-18000="top: -10%;">
+                    <h2>with jello</h2>
+                </section>
+                <section class="group2" data-18001="top:101%;"  data-18200="top: 50%;" data-18800="top:50%" data-19000="top: -10%;">
+                    <h2>with babies</h2>
+                </section>
+                <section class="group2" data-19001="top:101%;"  data-19200="top: 50%;" data-19800="top:50%" data-20000="top: -10%;">
+                    <h2>with bubbles</h2>
+                </section>
+                <section class="group2" data-20001="top:101%;"  data-20200="top: 50%;" data-20800="top:50%" data-21000="top: -10%;">
+                    <h2>of skype conversations with artists</h2>
+                </section>
+                <section class="group2" data-21001="top:101%;"  data-21200="top: 50%;" data-21800="top:50%" data-22000="top: -10%;">
+                    <h2>for the new inquiry about the authenticity of riff raff</h2>
+                </section>
+                <section class="group2" data-22001="top:101%;"  data-22200="top: 50%;" data-22800="top:50%" data-23000="top: -10%;">
+                    <h2>on facebook</h2>
+                </section>
+                <section class="group2" data-23001="top:101%;"  data-23200="top: 50%;" data-23800="top:50%" data-24000="top: -10%;">
+                    <h2>as performance art</h2>
+                </section>
+                <section class="group2" data-24001="top:101%;"  data-24200="top: 50%;" data-24800="top:50%" data-25000="top: -10%;">
+                    <h2>featuring two identical twins wearing those spandex zenti suits that cover their entire bodies</h2>
+                </section>
+                <section class="group2" data-25001="top:101%;"  data-25200="top: 50%;" data-25800="top:50%" data-26000="top: -10%;">
+                    <h2>made out of e pills</h2>
+                </section>
+                <section class="group2" data-26001="top:101%;"  data-26200="top: 50%;" data-26800="top:50%" data-27000="top: -10%;">
+                    <h2>but photoshopped because e pills dont even exist anymore because now everyone does molly</h2>
+                </section>
+                <section class="group2" data-27001="top:101%;"  data-27200="top: 50%;" data-27800="top:50%" data-28000="top: -10%;">
+                    <h2>flavored e-cig</h2>
+                </section>
+                <section class="group2" data-28001="top:101%;"  data-28200="top: 50%;" data-28800="top:50%" data-29000="top: -10%;">
+                    <h2>on the cross</h2>
+                </section>
+                <section class="group2" data-29001="top:101%;"  data-29200="top: 50%;" data-29800="top:50%" data-30000="top: -10%;">
+                    <h2>in the lower east side</h2>
+                </section>
+                <section class="group2" data-30001="top:101%;"  data-30200="top: 50%;" data-30800="top:50%" data-31000="top: -10%;">
+                    <h2>with tribal symbols</h2>
+                </section>
+                <section class="group2" data-31001="top:101%;"  data-31200="top: 50%;" data-31800="top:50%" data-32000="top: -10%;">
+                    <h2>using the word traverse and google image search in the same sentence</h2>
+                </section>
+                <section class="group2" data-32001="top:101%;"  data-32200="top: 50%;" data-32800="top:50%" data-33000="top: -10%;">
+                    <h2>while watching the chris angel show</h2>
+                </section>
+                <section class="group2" data-34001="top:101%;"  data-34200="top: 50%;" data-34800="top:50%" data-35000="top: -10%;">
+                    <h2>of death camps</h2>
+                </section>
+                 <section class="group2" data-35001="top:101%;"  data-35200="top: 50%;" data-35800="top:50%" data-36000="top: -10%;">
+                    <h2>with sad dads</h2>
+                </section>
+        </article>
+
+
+        <article class="Loop group3 js-loop">
+                <section class="group3" data-0="top:50%;"  data-200="top: 50%;" data-800="top:30%" data-1000="top: -10%;">
+                    <h2>in the shape of an alien head</h2>
+                </section>
+                <section class="group3" data-1001="top:101%;"  data-1200="top: 50%;" data-1800="top:50%" data-2000="top: -10%;">
+                    <h2>in white or various iridescent colors</h2>
+                </section>
+                <section class="group3" data-2001="top:101%;"  data-2200="top: 50%;" data-2800="top:50%" data-3000="top: -10%;">
+                    <h2>on an ipad</h2>
+                </section>
+                <section class="group3" data-3001="top:101%;"  data-3200="top: 50%;" data-3800="top:50%" data-4000="top: -10%;">
+                    <h2>then writing a blog post about it</h2>
+                </section>
+                <section class="group3" data-4001="top:101%;"  data-4200="top: 50%;" data-4800="top:50%" data-5000="top: -10%;">
+                    <h2>as an easel</h2>
+                </section>
+                <section class="group3" data-5001="top:101%;"  data-5200="top: 50%;" data-5800="top:50%" data-6000="top: -10%;">
+                    <h2>but on an ipad</h2>
+                </section>
+                <section class="group3" data-6001="top:101%;"  data-6200="top: 50%;" data-6800="top:50%" data-7000="top: -10%;">
+                    <h2>at a stripclub</h2>
+                </section>
+                <section class="group3" data-7001="top:101%;"  data-7200="top: 50%;" data-7800="top:50%" data-8000="top: -10%;">
+                    <h2>in the shape of ghosts</h2>
+                </section>
+                <section class="group3" data-8001="top:101%;"  data-8200="top: 50%;" data-8800="top:50%" data-9000="top: -10%;">
+                    <h2>in clear resin</h2>
+                </section>
+                <section class="group3" data-9001="top:101%;"  data-9200="top: 50%;" data-9800="top:50%" data-10000="top: -10%;">
+                    <h2>for arty girls in brooklyn</h2>
+                </section>
+                <section class="group3" data-10001="top:101%;"  data-10200="top: 50%;" data-10800="top:50%" data-11000="top: -10%;">
+                    <h2>in bushwick</h2>
+                </section>
+                <section class="group3" data-11001="top:101%;"  data-11200="top: 50%;" data-11800="top:50%" data-12000="top: -10%;">
+                    <h2>called outlet</h2>
+                </section>
+                <section class="group3" data-12001="top:101%;"  data-12200="top: 50%;" data-12800="top:50%" data-13000="top: -10%;">
+                    <h2>named "liminal spaces"</h2>
+                </section>
+                <section class="group3" data-13001="top:101%;"  data-13200="top: 50%;" data-13800="top:50%" data-14000="top: -10%;">
+                    <h2>a slice of  pizza</h2>
+                </section>
+                <section class="group3" data-14001="top:101%;"  data-14200="top: 50%;" data-14800="top:50%" data-15000="top: -10%;">
+                    <h2>in pizza</h2>
+                </section>
+                <section class="group3" data-15001="top:101%;"  data-15200="top: 50%;" data-15800="top:50%" data-16000="top: -10%;">
+                    <h2>into a hat</h2>
+                </section>
+                <section class="group3" data-16001="top:101%;"  data-16200="top: 50%;" data-16800="top:50%" data-17000="top: -10%;">
+                    <h2>in mexico</h2>
+                </section>
+                <section class="group3" data-17001="top:101%;"  data-17200="top: 50%;" data-17800="top:50%" data-18000="top: -10%;">
+                    <h2>that says, "I can't think of anything else that's a triangle besides pizza"</h2>
+                </section>
+                <section class="group3" data-18001="top:101%;"  data-18200="top: 50%;" data-18800="top:50%" data-19000="top: -10%;">
+                    <h2>and selling it</h2>
+                </section>
+                <section class="group3" data-19001="top:101%;"  data-19200="top: 50%;" data-19800="top:50%" data-20000="top: -10%;">
+                    <h2>with modest mouse playing in the background</h2>
+                </section>
+                <section class="group3" data-20001="top:101%;"  data-20200="top: 50%;" data-20800="top:50%" data-21000="top: -10%;">
+                    <h2>then painting your entire body camouflage too, to match</h2>
+                </section>
+                <section class="group3" data-21001="top:101%;"  data-21200="top: 50%;" data-21800="top:50%" data-22000="top: -10%;">
+                    <h2>as art</h2>
+                </section>
+                <section class="group3" data-22001="top:101%;"  data-22200="top: 50%;" data-22800="top:50%" data-23000="top: -10%;">
+                    <h2>that says, "free wifi"</h2>
+                </section>
+                <section class="group3" data-23001="top:101%;"  data-23200="top: 50%;" data-23800="top:50%" data-24000="top: -10%;">
+                    <h2>with a nike swoosh and a picture of Rihanna</h2>
+                </section>
+                <section class="group3" data-24001="top:101%;"  data-24200="top: 50%;" data-24800="top:50%" data-25000="top: -10%;">
+                    <h2>crying</h2>
+                </section>
+                <section class="group3" data-25001="top:101%;"  data-25200="top: 50%;" data-25800="top:50%" data-26000="top: -10%;">
+                    <h2>as anime characters</h2>
+                </section>
+                <section class="group3" data-26001="top:101%;"  data-26200="top: 50%;" data-26800="top:50%" data-27000="top: -10%;">
+                    <h2>at a party</h2>
+                </section>
+                <section class="group3" data-27001="top:101%;"  data-27200="top: 50%;" data-27800="top:50%" data-28000="top: -10%;">
+                    <h2>in a gallery</h2>
+                </section>
+                <section class="group3" data-28001="top:101%;"  data-28200="top: 50%;" data-28800="top:50%" data-29000="top: -10%;">
+                    <h2>or whatever</h2>
+                </section>
+                <section class="group3" data-29001="top:101%;"  data-29200="top: 50%;" data-29800="top:50%" data-30000="top: -10%;">
+                    <h2>that says: ADOLESCENCE</h2>
+                </section>
+                <section class="group3" data-30001="top:101%;"  data-30200="top: 50%;" data-30800="top:50%" data-31000="top: -10%;">
+                    <h2>with military fatigue</h2>
+                </section>
+                <section class="group3" data-31001="top:101%;"  data-31200="top: 50%;" data-31800="top:50%" data-32000="top: -10%;">
+                    <h2>in a glass case</h2>
+                </section>
+                <section class="group3" data-32001="top:101%;"  data-32200="top: 50%;" data-32800="top:50%" data-33000="top: -10%;">
+                    <h2> named "encryption"</h2>
+                </section>
+                <section class="group3" data-34001="top:101%;"  data-34200="top: 50%;" data-34800="top:50%" data-35000="top: -10%;">
+                    <h2>on the mona lisa</h2>
+                </section>
+        </article>
+
+
+</div>
+                                
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+    <script type="text/javascript" src="skrollr.min.js"></script>
+    <script type="text/javascript">
+    var s = skrollr.init();
+    </script>
+</body>
+</html>
