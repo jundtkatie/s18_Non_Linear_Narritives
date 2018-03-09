@@ -1,0 +1,328 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" /> -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="jquery.fullPage.js"></script> -->
+
+
+<title>Obvious Ideas</title>
+
+<style>
+html, body {
+/*  height: 100%;*/
+  margin: auto 0;
+/*  width: 95%;*/
+  overflow: hidden;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  background: #FF4136;
+  transform:scaley(-1);
+/*    background-color: #FDA19E;
+*/}
+ 
+#fullpage {
+/*  height: 100vh;*/
+  width: 90%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+ 
+.sectionB {
+    overflow-y: scroll;
+    height: 100vh;
+    margin: auto;
+    top: 50%;
+    width: 30%;
+    transform: rotate(180deg);
+/*    transform:scaley(-1);*/
+}
+.section {
+    overflow-y: scroll;
+    height: 100vh;
+    margin: auto;
+    width: 30%;
+    top: 50%;
+}
+
+.slide {
+  text-align: center;
+  font-size: .7em;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 2px solid #40100E;
+    box-shadow: 5px 10px #40100E;
+    background-color: #DF392F;
+    padding: 25px 15px 25px 15px;
+    position: sticky;
+/*    top: 500px;*/
+top: 45.5vh;
+    margin-bottom: 80%;
+    margin-top: 800px;
+    transform: rotate(180deg) !important;
+}
+
+.slideB {
+  text-align: center;
+  font-size: .7em;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 2px solid #40100E;
+    box-shadow: 5px 10px #40100E;
+    background-color: #DF392F;
+    padding: 25px 15px 25px 15px;
+    position: sticky;
+/*    top: 470px;*/
+top: 45.5vh;
+    margin-top: 800px;
+
+}
+
+::scrollbar {
+  display: none;
+}
+
+h1 {
+    position: fixed;
+    left: 65px;
+    bottom: 16px;
+    font-size: 0.3em;
+    color: #BF3129;
+    vertical-align: center;
+}
+
+.twitter-follow-button img {
+    position: fixed;
+    width: 30px;
+    left: 20px;
+    bottom: 20px;
+}
+</style>
+
+</head>
+
+<body> 
+    <h1>It's not hard to come up with obvious ideas.</h1>
+    
+    <a href="https://twitter.com/obviousideas?ref_src=twsrc%5Etfw" class="twitter-follow-button" target="_blank"><img src="twitter.svg"></a>
+   
+    <div id="fullpage">
+                <div class="sectionB" data-anchor="section1">
+                    <h2 class="slide" data-anchor="slide1">a coffee table</h2>
+                    <h2 class="slide" data-anchor="slide2">an art show</h2>
+                    <h2 class="slide" data-anchor="slide3">a painting</h2>
+                    <h2 class="slide" data-anchor="slide4">a series of abstract paintings</h2>
+                    <h2 class="slide" data-anchor="slide5">salt and pepper shakers</h2>
+                    <h2 class="slide" data-anchor="slide6">a webcam based sex website</h2>
+                    <h2 class="slide" data-anchor="slide7">a real estate agency </h2>
+                    <h2 class="slide" data-anchor="slide8">a cafe slash co working space </h2>
+                    <h2 class="slide" data-anchor="slide9">a baseball hat</h2>
+                    <h2 class="slide" data-anchor="slide10">a Little Caesars</h2>
+                    <h2 class="slide" data-anchor="slide11">a t-shirt</h2>
+                    <h2 class="slide" data-anchor="slide12">a sportswear line</h2>
+                    <h2 class="slide" data-anchor="slide13">a monitor stand</h2>
+                    <h2 class="slide" data-anchor="slide14">drugs</h2>
+                    <h2 class="slide" data-anchor="slide15">black and white portraits</h2>
+                    <h2 class="slide" data-anchor="slide16">a band</h2>
+                    <h2 class="slide" data-anchor="slide17">a 20 foot painting</h2>
+                    <h2 class="slide" data-anchor="slide18">a selfie website</h2>
+                    <h2 class="slide" data-anchor="slide19">an antiselfie website</h2>
+                    <h2 class="slide" data-anchor="slide20">a poem</h2>
+                    <h2 class="slide" data-anchor="slide21">a custom gold name plate necklace</h2>
+                    <h2 class="slide" data-anchor="slide22">your wifi network</h2>
+                    <h2 class="slide" data-anchor="slide23">paintings of anime characters</h2>
+                    <h2 class="slide" data-anchor="slide24">paintings of hollywood movie stars</h2>
+                    <h2 class="slide" data-anchor="slide25">an instagram curator</h2>
+                    <h2 class="slide" data-anchor="slide26">pinkberry uniforms</h2>
+                    <h2 class="slide" data-anchor="slide27">a lawn chair</h2>
+                    <h2 class="slide" data-anchor="slide35">gloves where each finger is a weed leaf</h2>
+                    <h2 class="slide" data-anchor="slide28">an interpretive dance</h2>
+                    <h2 class="slide" data-anchor="slide29">a flipbook</h2>
+                    <h2 class="slide" data-anchor="slide30">a bottle of axe</h2>
+                    <h2 class="slide" data-anchor="slide31">a mean people suck sticker</h2>
+                    <h2 class="slide" data-anchor="slide32">a pop up shop</h2>
+                    <h2 class="slide" data-anchor="slide33">a real-time graph</h2>
+                    <h2 class="slide" data-anchor="slide34">a fake street artist</h2>
+                </div>
+                <div class="section" data-anchor="section2">
+                    <h2 class="slideB" data-anchor="slide1">of denim bean bags</h2>
+                    <h2 class="slideB" data-anchor="slide2">of bongs</h2>
+                    <h2 class="slideB" data-anchor="slide3">of a giant usb symbol</h2>
+                    <h2 class="slideB" data-anchor="slide4">mimicking Rothko</h2>
+                    <h2 class="slideB" data-anchor="slide5">cast in yellow resin</h2>
+                    <h2 class="slideB" data-anchor="slide6">of party photographers</h2>
+                    <h2 class="slideB" data-anchor="slide7">involving stedicams</h2>
+                    <h2 class="slideB" data-anchor="slide8">of internet loader gifs</h2>
+                    <h2 class="slideB" data-anchor="slide9">of cables</h2>
+                    <h2 class="slideB" data-anchor="slide10">cut up and mixed</h2>
+                    <h2 class="slideB" data-anchor="slide11">cast in plaster</h2>
+                    <h2 class="slideB" data-anchor="slide12">made out of resin</h2>
+                    <h2 class="slideB" data-anchor="slide13">with various stock photos of landscapes</h2>
+                    <h2 class="slideB" data-anchor="slide14">with grumpy cat on it</h2>
+                    <h2 class="slideB" data-anchor="slide15">that sells hand crafted jewelry</h2>
+                    <h2 class="slideB" data-anchor="slide16">of the price of bitcoins</h2>
+                    <h2 class="slideB" data-anchor="slide17">of chester cheeto</h2>
+                    <h2 class="slideB" data-anchor="slide18">with jello</h2>
+                    <h2 class="slideB" data-anchor="slide19">with babies</h2>
+                    <h2 class="slideB" data-anchor="slide20">with bubbles</h2>
+                    <h2 class="slideB" data-anchor="slide21">of skype conversations with artists</h2>
+                    <h2 class="slideB" data-anchor="slide22">for the authenticity of riff raff</h2>
+                    <h2 class="slideB" data-anchor="slide23">on facebook</h2>
+                    <h2 class="slideB" data-anchor="slide24">as performance art</h2>
+                    <h2 class="slideB" data-anchor="slide25">featuring identical twins in spandex</h2>
+                    <h2 class="slideB" data-anchor="slide26">made out of e pills</h2>
+                    <h2 class="slideB" data-anchor="slide27">but photoshopped</h2>
+                    <h2 class="slideB" data-anchor="slide28">flavored e-cig</h2>
+                    <h2 class="slideB" data-anchor="slide29">on the cross</h2>
+                    <h2 class="slideB" data-anchor="slide30">in the lower east side</h2>
+                    <h2 class="slideB" data-anchor="slide31">with tribal symbols</h2>
+                    <h2 class="slideB" data-anchor="slide32">using the word "traverse"</h2>
+                    <h2 class="slideB" data-anchor="slide33">while watching the chris angel show</h2>
+                    <h2 class="slideB" data-anchor="slide34">of death camps</h2>
+                    <h2 class="slideB" data-anchor="slide35">with sad dads</h2>
+                </div>
+
+                <div class="sectionB" data-anchor="section3">
+                    <h2 class="slide" data-anchor="slide1">in the shape of an alien head</h2>
+                    <h2 class="slide" data-anchor="slide2">in white or various iridescent colors</h2>
+                    <h2 class="slide" data-anchor="slide3">on an ipad</h2>
+                    <h2 class="slide" data-anchor="slide4">then writing a blog post about it</h2>
+                    <h2 class="slide" data-anchor="slide5">as an easel</h2>
+                    <h2 class="slide" data-anchor="slide6">but on an ipad</h2>
+                    <h2 class="slide" data-anchor="slide7">at a stripclub</h2>
+                    <h2 class="slide" data-anchor="slide8">in the shape of ghosts</h2>
+                    <h2 class="slide" data-anchor="slide9">in clear resin</h2>
+                    <h2 class="slide" data-anchor="slide10">for arty girls in brooklyn</h2>
+                    <h2 class="slide" data-anchor="slide11">in bushwick</h2>
+                    <h2 class="slide" data-anchor="slide12">called outlet</h2>
+                    <h2 class="slide" data-anchor="slide13">named "liminal spaces"</h2>
+                    <h2 class="slide" data-anchor="slide14">a slice of  pizza</h2>
+                    <h2 class="slide" data-anchor="slide15">in pizza</h2>
+                    <h2 class="slide" data-anchor="slide16">into a hat</h2>
+                    <h2 class="slide" data-anchor="slide17">in mexico</h2>
+                    <h2 class="slide" data-anchor="slide18">that says, "I can't think of pizza"</h2>
+                    <h2 class="slide" data-anchor="slide19">and selling it</h2>
+                    <h2 class="slide" data-anchor="slide20">with modest mouse playing softly</h2>
+                    <h2 class="slide" data-anchor="slide21">then painting your entire body</h2>
+                    <h2 class="slide" data-anchor="slide22">as art</h2>
+                    <h2 class="slide" data-anchor="slide23">that says, "free wifi"</h2>
+                    <h2 class="slide" data-anchor="slide24">with a nike swoosh</h2>
+                    <h2 class="slide" data-anchor="slide25">crying</h2>
+                    <h2 class="slide" data-anchor="slide26">as anime characters</h2>
+                    <h2 class="slide" data-anchor="slide27">at a party</h2>
+                    <h2 class="slide" data-anchor="slide28">in a gallery</h2>
+                    <h2 class="slide" data-anchor="slide29">or whatever</h2>
+                    <h2 class="slide" data-anchor="slide30">that says: ADOLESCENCE</h2>
+                    <h2 class="slide" data-anchor="slide31">with military fatigue</h2>
+                    <h2 class="slide" data-anchor="slide32">in a glass case</h2>
+                    <h2 class="slide" data-anchor="slide33"> named "encryption"</h2>
+                    <h2 class="slide" data-anchor="slide34">on the mona lisa</h2>
+                    <h2 class="slide" data-anchor="slide35">with a picture of Rihanna</h2>
+                </div>
+
+
+    </div>
+
+
+                                
+
+<script>
+
+    $(document).ready(function(){ 
+     $(window).scroll(function(){
+       $('.slide').css('transform', 'translate3d(0,' + $(this).scrollTop()*2 + 'px, 0)'); 
+    }).scroll();
+});  
+
+
+// $(document).ready(function() {
+//     $('#fullpage').fullpage({
+//         //Navigation
+//         menu: '#menu',
+//         lockAnchors: true,
+//         // anchors:['firstPage', 'secondPage'],
+//         navigation: false,
+//         navigationPosition: 'right',
+//         showActiveTooltip: true,
+//         slidesNavigation: true,
+//         slidesNavPosition: 'bottom',
+
+//         //Scrolling
+//         css3: true,
+//         scrollingSpeed: 700,
+//         autoScrolling: false,
+//         fitToSection: true,
+//         fitToSectionDelay: 0,
+//         scrollBar: false,
+//         easing: 'easeInOutCubic',
+//         easingcss3: 'ease',
+//         loopBottom: true,
+//         loopTop: true,
+//         loopHorizontal: false,
+//         continuousVertical: true,
+//         continuousHorizontal: true,
+//         scrollHorizontally: false,
+//         interlockedSlides: false,
+//         dragAndMove: false,
+//         offsetSections: true,
+//         resetSliders: false,
+//         fadingEffect: false,
+//         normalScrollElements: '#element1, .element2',
+//         scrollOverflow: false,
+//         scrollOverflowReset: false,
+//         scrollOverflowOptions: null,
+//         touchSensitivity: 15,
+//         normalScrollElementTouchThreshold: 5,
+//         bigSectionsDestination: null,
+
+//         //Accessibility
+//         keyboardScrolling: true,
+//         animateAnchor: true,
+//         recordHistory: true,
+
+//         //Design
+//         controlArrows: true,
+//         verticalCentered: true,
+//         paddingTop: '200px',
+//         paddingBottom: '200px',
+//         responsiveWidth: 0,
+//         responsiveHeight: 0,
+//         responsiveSlides: true,
+//         parallax: false,
+//         parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+//         //Custom selectors
+//         sectionSelector: '.h1',
+//         slideSelector: 'h1',
+
+//         lazyLoading: true,
+
+//         //events
+//         onLeave: function(index, nextIndex, direction){},
+//         afterLoad: function(anchorLink, index){},
+//         afterRender: function(){},
+//         afterResize: function(){},
+//         afterResponsive: function(isResponsive){},
+//         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+//         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+//     });
+// });
+
+// $(document).ready(function() {
+//     $('#fullpage').moveSectionUp({
+//         anchors:['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9', 'slide10', 'slide11', 'slide12', 'slide13', 'slide14', 'slide15', 'slide16', 'slide17', 'slide18', 'slide19', 'slide20', 'slide21', 'slide22', 'slide23', 'slide24', 'slide25', 'slide26', 'slide27', 'slide28', 'slide29', 'slide30', 'slide31', 'slide32', 'slide33', 'slide34', 'slide35']
+//     });
+// });
+</script>
+</body> 
+</html>
