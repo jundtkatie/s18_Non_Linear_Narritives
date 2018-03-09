@@ -19,8 +19,9 @@ html, body {
   overflow: hidden;
   font-family: "Avenir Next", Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 30px;
   background: #FF4136;
+  transform:scaley(-1);
 /*    background-color: #FDA19E;
 */}
  
@@ -33,11 +34,21 @@ html, body {
 }
 
  
+.sectionB {
+    overflow-y: scroll;
+    height: 100vh;
+    margin: auto;
+    top: 50%;
+    width: 30%;
+    transform: rotate(180deg);
+/*    transform:scaley(-1);*/
+}
 .section {
     overflow-y: scroll;
     height: 100vh;
     margin: auto;
     width: 30%;
+    top: 50%;
 }
 
 .slide {
@@ -46,23 +57,36 @@ html, body {
     color: #fff;
     text-align: center;
     margin-right: 5px;
-    margin-top: 400px;
-    margin-bottom: 700px;
     margin-left: 5px;
     border: 2px solid #40100E;
     box-shadow: 5px 10px #40100E;
     background-color: #DF392F;
-    padding: 15px 15px 15px 15px;
+    padding: 25px 15px 25px 15px;
     position: sticky;
-    margin-top: 300px;
-    top: 40%;
-    padding-top: 9%;
-/*    padding-bottom: 2%;*/
-    min-height: 17%;
-    align-self: flex-start;
-
+/*    top: 500px;*/
+top: 45.5vh;
+    margin-bottom: 80%;
+    margin-top: 800px;
+    transform: rotate(180deg) !important;
 }
 
+.slideB {
+  text-align: center;
+  font-size: .7em;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 2px solid #40100E;
+    box-shadow: 5px 10px #40100E;
+    background-color: #DF392F;
+    padding: 25px 15px 25px 15px;
+    position: sticky;
+/*    top: 470px;*/
+top: 45.5vh;
+    margin-top: 800px;
+
+}
 
 ::scrollbar {
   display: none;
@@ -93,7 +117,7 @@ h1 {
     <a href="https://twitter.com/obviousideas?ref_src=twsrc%5Etfw" class="twitter-follow-button" target="_blank"><img src="twitter.svg"></a>
    
     <div id="fullpage">
-                <div class="section" data-anchor="section1">
+                <div class="sectionB" data-anchor="section1">
                     <h2 class="slide" data-anchor="slide1">a coffee table</h2>
                     <h2 class="slide" data-anchor="slide2">an art show</h2>
                     <h2 class="slide" data-anchor="slide3">a painting</h2>
@@ -121,7 +145,7 @@ h1 {
                     <h2 class="slide" data-anchor="slide25">an instagram curator</h2>
                     <h2 class="slide" data-anchor="slide26">pinkberry uniforms</h2>
                     <h2 class="slide" data-anchor="slide27">a lawn chair</h2>
-                    <h2 class="slide" data-anchor="slide35">gloves where each finger is like one of the weed leafs</h2>
+                    <h2 class="slide" data-anchor="slide35">gloves where each finger is a weed leaf</h2>
                     <h2 class="slide" data-anchor="slide28">an interpretive dance</h2>
                     <h2 class="slide" data-anchor="slide29">a flipbook</h2>
                     <h2 class="slide" data-anchor="slide30">a bottle of axe</h2>
@@ -131,44 +155,44 @@ h1 {
                     <h2 class="slide" data-anchor="slide34">a fake street artist</h2>
                 </div>
                 <div class="section" data-anchor="section2">
-                    <h2 class="slide" data-anchor="slide1">of denim bean bags</h2>
-                    <h2 class="slide" data-anchor="slide2">of bongs</h2>
-                    <h2 class="slide" data-anchor="slide3">of a giant usb symbol</h2>
-                    <h2 class="slide" data-anchor="slide4">mimicking Rothko</h2>
-                    <h2 class="slide" data-anchor="slide5">cast in yellow resin</h2>
-                    <h2 class="slide" data-anchor="slide6">of party photographers</h2>
-                    <h2 class="slide" data-anchor="slide7">involving stedicams</h2>
-                    <h2 class="slide" data-anchor="slide8">of internet loader gifs</h2>
-                    <h2 class="slide" data-anchor="slide9">of cables</h2>
-                    <h2 class="slide" data-anchor="slide10">cut up and mixed</h2>
-                    <h2 class="slide" data-anchor="slide11">cast in plaster</h2>
-                    <h2 class="slide" data-anchor="slide12">made out of resin</h2>
-                    <h2 class="slide" data-anchor="slide13">with various bank logos and stock photos of landscapes</h2>
-                    <h2 class="slide" data-anchor="slide14">with grumpy cat on it</h2>
-                    <h2 class="slide" data-anchor="slide15">that sells hand crafted jewelry</h2>
-                    <h2 class="slide" data-anchor="slide16">of the price of bitcoins</h2>
-                    <h2 class="slide" data-anchor="slide17">of chester cheeto</h2>
-                    <h2 class="slide" data-anchor="slide18">with jello</h2>
-                    <h2 class="slide" data-anchor="slide19">with babies</h2>
-                    <h2 class="slide" data-anchor="slide20">with bubbles</h2>
-                    <h2 class="slide" data-anchor="slide21">of skype conversations with artists</h2>
-                    <h2 class="slide" data-anchor="slide22">for the new inquiry about the authenticity of riff raff</h2>
-                    <h2 class="slide" data-anchor="slide23">on facebook</h2>
-                    <h2 class="slide" data-anchor="slide24">as performance art</h2>
-                    <h2 class="slide" data-anchor="slide25">featuring two identical twins wearing those spandex zenti suits that cover their entire bodies</h2>
-                    <h2 class="slide" data-anchor="slide26">made out of e pills</h2>
-                    <h2 class="slide" data-anchor="slide27">but photoshopped because e pills dont even exist anymore because now everyone does molly</h2>
-                    <h2 class="slide" data-anchor="slide28">flavogroup2 e-cig</h2>
-                    <h2 class="slide" data-anchor="slide29">on the cross</h2>
-                    <h2 class="slide" data-anchor="slide30">in the lower east side</h2>
-                    <h2 class="slide" data-anchor="slide31">with tribal symbols</h2>
-                    <h2 class="slide" data-anchor="slide32">using the word traverse and google image search in the same sentence</h2>
-                    <h2 class="slide" data-anchor="slide33">while watching the chris angel show</h2>
-                    <h2 class="slide" data-anchor="slide34">of death camps</h2>
-                    <h2 class="slide" data-anchor="slide35">with sad dads</h2>
+                    <h2 class="slideB" data-anchor="slide1">of denim bean bags</h2>
+                    <h2 class="slideB" data-anchor="slide2">of bongs</h2>
+                    <h2 class="slideB" data-anchor="slide3">of a giant usb symbol</h2>
+                    <h2 class="slideB" data-anchor="slide4">mimicking Rothko</h2>
+                    <h2 class="slideB" data-anchor="slide5">cast in yellow resin</h2>
+                    <h2 class="slideB" data-anchor="slide6">of party photographers</h2>
+                    <h2 class="slideB" data-anchor="slide7">involving stedicams</h2>
+                    <h2 class="slideB" data-anchor="slide8">of internet loader gifs</h2>
+                    <h2 class="slideB" data-anchor="slide9">of cables</h2>
+                    <h2 class="slideB" data-anchor="slide10">cut up and mixed</h2>
+                    <h2 class="slideB" data-anchor="slide11">cast in plaster</h2>
+                    <h2 class="slideB" data-anchor="slide12">made out of resin</h2>
+                    <h2 class="slideB" data-anchor="slide13">with various stock photos of landscapes</h2>
+                    <h2 class="slideB" data-anchor="slide14">with grumpy cat on it</h2>
+                    <h2 class="slideB" data-anchor="slide15">that sells hand crafted jewelry</h2>
+                    <h2 class="slideB" data-anchor="slide16">of the price of bitcoins</h2>
+                    <h2 class="slideB" data-anchor="slide17">of chester cheeto</h2>
+                    <h2 class="slideB" data-anchor="slide18">with jello</h2>
+                    <h2 class="slideB" data-anchor="slide19">with babies</h2>
+                    <h2 class="slideB" data-anchor="slide20">with bubbles</h2>
+                    <h2 class="slideB" data-anchor="slide21">of skype conversations with artists</h2>
+                    <h2 class="slideB" data-anchor="slide22">for the authenticity of riff raff</h2>
+                    <h2 class="slideB" data-anchor="slide23">on facebook</h2>
+                    <h2 class="slideB" data-anchor="slide24">as performance art</h2>
+                    <h2 class="slideB" data-anchor="slide25">featuring identical twins in spandex</h2>
+                    <h2 class="slideB" data-anchor="slide26">made out of e pills</h2>
+                    <h2 class="slideB" data-anchor="slide27">but photoshopped</h2>
+                    <h2 class="slideB" data-anchor="slide28">flavored e-cig</h2>
+                    <h2 class="slideB" data-anchor="slide29">on the cross</h2>
+                    <h2 class="slideB" data-anchor="slide30">in the lower east side</h2>
+                    <h2 class="slideB" data-anchor="slide31">with tribal symbols</h2>
+                    <h2 class="slideB" data-anchor="slide32">using the word "traverse"</h2>
+                    <h2 class="slideB" data-anchor="slide33">while watching the chris angel show</h2>
+                    <h2 class="slideB" data-anchor="slide34">of death camps</h2>
+                    <h2 class="slideB" data-anchor="slide35">with sad dads</h2>
                 </div>
 
-                <div class="section" data-anchor="section3">
+                <div class="sectionB" data-anchor="section3">
                     <h2 class="slide" data-anchor="slide1">in the shape of an alien head</h2>
                     <h2 class="slide" data-anchor="slide2">in white or various iridescent colors</h2>
                     <h2 class="slide" data-anchor="slide3">on an ipad</h2>
@@ -186,13 +210,13 @@ h1 {
                     <h2 class="slide" data-anchor="slide15">in pizza</h2>
                     <h2 class="slide" data-anchor="slide16">into a hat</h2>
                     <h2 class="slide" data-anchor="slide17">in mexico</h2>
-                    <h2 class="slide" data-anchor="slide18">that says, "I can't think of anything else that's a triangle besides pizza"</h2>
+                    <h2 class="slide" data-anchor="slide18">that says, "I can't think of pizza"</h2>
                     <h2 class="slide" data-anchor="slide19">and selling it</h2>
-                    <h2 class="slide" data-anchor="slide20">with modest mouse playing in the background</h2>
-                    <h2 class="slide" data-anchor="slide21">then painting your entire body camouflage too, to match</h2>
+                    <h2 class="slide" data-anchor="slide20">with modest mouse playing softly</h2>
+                    <h2 class="slide" data-anchor="slide21">then painting your entire body</h2>
                     <h2 class="slide" data-anchor="slide22">as art</h2>
                     <h2 class="slide" data-anchor="slide23">that says, "free wifi"</h2>
-                    <h2 class="slide" data-anchor="slide24">with a nike swoosh and a picture of Rihanna</h2>
+                    <h2 class="slide" data-anchor="slide24">with a nike swoosh</h2>
                     <h2 class="slide" data-anchor="slide25">crying</h2>
                     <h2 class="slide" data-anchor="slide26">as anime characters</h2>
                     <h2 class="slide" data-anchor="slide27">at a party</h2>
@@ -203,6 +227,7 @@ h1 {
                     <h2 class="slide" data-anchor="slide32">in a glass case</h2>
                     <h2 class="slide" data-anchor="slide33"> named "encryption"</h2>
                     <h2 class="slide" data-anchor="slide34">on the mona lisa</h2>
+                    <h2 class="slide" data-anchor="slide35">with a picture of Rihanna</h2>
                 </div>
 
 
@@ -212,6 +237,14 @@ h1 {
                                 
 
 <script>
+
+    $(document).ready(function(){ 
+     $(window).scroll(function(){
+       $('.slide').css('transform', 'translate3d(0,' + $(this).scrollTop()*2 + 'px, 0)'); 
+    }).scroll();
+});  
+
+
 // $(document).ready(function() {
 //     $('#fullpage').fullpage({
 //         //Navigation
