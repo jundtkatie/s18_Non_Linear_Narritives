@@ -2,10 +2,7 @@
 <html>
 <head>
   <title>Different Buckets</title>
-  <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+
 
   <link rel="stylesheet" href="https://use.typekit.net/rhk7dsb.css">
 
@@ -438,37 +435,7 @@
     </div>
   </div>
 
-<script>
 
-(function( $ ){
-    $.fn.cascadeMe = function() {
-
-        return this.each(function() {           
-
-            var $this = $(this);
-            var obj = $(this).children('span');
-            var arr = $.makeArray(obj);          
-            arr.sort(function() {return 0.5 - Math.random()});          
-            $this.empty().show();
-            arr.push("");
-
-            var delay = 150;
-
-            $.each(arr, function(i, val) {
-                $this.append(val);
-                $this.children('span').hide().fadeIn(500).delay(delay * i);
-            });
-
-        });
-
-    };
-})( jQuery );
-
-
-$("img").sort(function(a,b){return Math.round(Math.random())-0.5}).each(function(i) {
-    $(this).delay(i*100).fadeTo('slow',1);
-});
-</script>
 
 </body>
 </html>
