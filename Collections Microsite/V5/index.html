@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+  <title>Different Buckets</title>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+
+  <link rel="stylesheet" href="https://use.typekit.net/rhk7dsb.css">
+
+  <link rel='stylesheet'  href='styles.css' type='text/css'>
+</head>
+
+<body>
+
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('technology')"> technology</button>
+  <button class="btn" onclick="filterSelection('waste')"> waste</button>
+  <button class="btn" onclick="filterSelection('sublime')"> sublime</button>
+  <button class="btn" onclick="filterSelection('innovation')"> innovation</button>
+  <button class="btn" onclick="filterSelection('humanity')"> humanity</button>
+  <button class="btn" onclick="filterSelection('culture')"> culture</button>
+  <button class="btn" onclick="filterSelection('convention')"> convention</button>
+  <button class="btn" onclick="filterSelection('entertainment')"> entertainment</button>
+  <button class="btn" onclick="filterSelection('everyone')"> everyone</button>
+  <button class="btn" onclick="filterSelection('noone')"> no one</button>
+</div>
+
+<div class="wordcontainer">
+<h1 class="filterDiv technology">technology</h1>
+<h1 class="filterDiv waste">waste</h1>
+<h1 class="filterDiv sublime">sublime</h1>
+<h1 class="filterDiv innovation">innovation</h1>
+<h1 class="filterDiv humanity">humanity</h1>
+<h1 class="filterDiv culture">culture</h1>
+<h1 class="filterDiv convention">convention</h1>
+<h1 class="filterDiv entertainment">entertainment</h1>
+<h1 class="filterDiv everyone">everyone</h1>
+<h1 class="filterDiv noone">no one</h1>
+</div>
+    
+<div class="container">
+    <img class="filterDiv technology innovation everyone" onclick="filterSelection('technology')" src="images/1.png">
+   
+    <img class="filterDiv humanity" onclick="filterSelection('humanity')" src="images/2.png">
+   
+    <img class="filterDiv technology humanity" onclick="filterSelection('technology', 'humanity')" src="images/3.png">
+   
+    <img class="filterDiv technology innovation entertainment everyone sublime" onclick="filterSelection('technology', 'innovation', 'sublime', 'everyone', 'entertainment')" src="images/4.png">
+   
+    <img class="filterDiv technology innovation culture" onclick="filterSelection('technology', 'innovation', 'culture')" src="images/5.png">
+   
+    <img class="filterDiv technology entertainment culture" onclick="filterSelection('technology', 'culture', 'entertainment')" src="images/6.png">
+   
+    <img class="filterDiv humanity everyone culture" onclick="filterSelection('humanity', 'everyone', 'culture')" src="images/7.png">
+   
+    <img class="filterDiv sublime innovation humanity" onclick="filterSelection('sublime', 'innovation', 'humanity')" src="images/8.png">
+   
+    <img class="filterDiv technology innovation entertainment" onclick="filterSelection('innovation', 'technology', 'entertainment')" src="images/9.png">
+   
+    <img class="filterDiv humanity everyone entertainment culture" onclick="filterSelection('humanity', 'everyone', 'entertainment', 'culture')" src="images/10.png">
+</div>
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+$(document).click(function() {
+      $('.wordcontainer').css({
+          "display": "block",
+      })
+  });
+</script>
+
+<script type="text/javascript">
+// $( "#art" ).click(function() {
+//   $( "#tech" ).toggle();
+//   $( "#ogtech" ).toggle();
+//   $( "#humanity" ).toggle();
+//   $( "#brokenscreen" ).toggle();
+//   $( "#modern" ).toggle();
+//   $( "#scifi" ).toggle();
+//   $( "#production" ).toggle();
+//   $( "#lizard" ).toggle();
+//   $( "#waste" ).toggle();
+// });
+</script>
+</body>
+</html>
+
+  
+  
