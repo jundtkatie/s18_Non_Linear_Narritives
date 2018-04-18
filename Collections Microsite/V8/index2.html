@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+<head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.js"></script>
+
+<!--   <script src="scripts.js"></script> -->
+<link rel="stylesheet" href="https://use.typekit.net/rhk7dsb.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--   <link rel='stylesheet'  href='styles.css' type='text/css'> -->
+
+<title>Different Buckets (v8)</title>
+
+
+<style type="text/css">
+
+
+body, html {
+  margin: auto;
+}
+
+.gallery {
+  position: relative;
+  padding: 1rem;
+}
+
+.image {
+  display: inline-block;
+  position: relative;
+}
+
+img {
+  opacity: 1;
+  display: inline-block;
+  max-width: 200px;
+  max-height: 300px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  position: relative;
+  margin: 15px;
+  box-shadow: 2px 2px 3px black;
+  z-index: -1;
+}
+
+img:hover {
+  opacity: 0.6;
+  transition: .5s ease;
+}
+
+.middle {
+  transition: .5s ease;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: freight-sans-condensed-pro, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.text {
+  top: -150px;
+  padding-left: 30px;
+  z-index: 100;
+}
+
+.text:hover {
+  opacity: 1;
+  z-index: 100;
+  transition: .2s ease;
+  color: #E74C3C;
+  
+}
+
+
+.floating-button {
+  background: white;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px black;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-top: 100px;
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-family: freight-sans-condensed-pro, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.floating-button:hover {
+  color: #E74C3C;
+  border: 2px solid #E74C3C;
+  transition: .2s ease;
+}
+
+h1 {
+  color: black;
+  position: fixed;
+  border: 7px solid black;
+  text-transform: uppercase;
+  left: 20px;
+  padding: 10px 55px;
+  font-size: 8em;
+  opacity: .8;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: freight-sans-compressed-pro, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+</style>
+</head>
+
+<body>
+
+<div class="parent">
+  <div class="gallery"></div>
+</div>
+<script type="text/template" id="image-template">
+  <div class="image">
+    <img />
+    <div class="middle">
+    </div>
+  </div>
+</script>
+
+
+
+<script type="text/javascript">
+  /****** Tools *******/
+/*
+ * These help us build our gallery depending on
+ * the current state.
+ */
+
+const images = [
+  {
+    url: 'images/1.png',
+    tags: ['everything', 'innovation', 'technology']
+  },
+  {
+    url: 'images/2.png',
+    tags: ['everything', 'humanity', 'consumers', 'waste']
+  },
+  {
+    url: 'images/3.gif',
+    tags: ['everything', 'innovation', 'consumers', 'technology']
+  },
+  {
+    url: 'images/4.png',
+    tags: ['everything', 'innovation', 'consumers', 'technology', 'humanity']
+  },
+  {
+    url: 'images/5.gif',
+    tags: ['everything', 'innovation', 'consumers', 'technology', 'humanity']
+  },
+  {
+    url: 'images/6.png',
+    tags: ['everything', 'consumers']
+  },
+  {
+    url: 'images/7.png',
+    tags: ['everything', 'humanity', 'consumer', 'beauty']
+  },
+  {
+    url: 'images/8.jpg',
+    tags: ['everything', 'consumers', 'technology']
+  },
+  {
+    url: 'images/9.png',
+    tags: ['everything', 'innovation', 'consumers', 'technology']
+  },
+  {
+    url: 'images/10.png',
+    tags: ['everything', 'consumer', 'humanity']
+  },
+  {
+    url: 'images/11.png',
+    tags: ['everything', 'humanity', 'technology', 'them', 'waste']
+  },
+  {
+    url: 'images/12.png',
+    tags: ['everything', 'humanity', 'consumer', 'technology', 'innovation']
+  },
+  {
+    url: 'images/13.png',
+    tags: ['everything', 'consumer']
+  },
+  {
+    url: 'images/14.png',
+    tags: ['everything', 'humanity', 'consumer', 'technology']
+  },
+  {
+    url: 'images/15.png',
+    tags: ['everything', 'consumer', 'humanity', 'technology', 'them', 'waste']
+  },
+  {
+    url: 'images/16.png',
+    tags: ['everything', 'humanity', 'technology', 'them', 'waste']
+  },
+  {
+    url: 'images/17.png',
+    tags: ['everything', 'humanity', 'technology', 'beauty', 'them', 'waste']
+  },
+  {
+    url: 'images/18.gif',
+    tags: ['everything', 'technology', 'consumer']
+  },
+  {
+    url: 'images/19.png',
+    tags: ['everything', 'consumer', 'technology']
+  },
+  {
+    url: 'images/20.png',
+    tags: ['everything', 'technology', 'them', 'waste']
+  },
+  {
+    url: 'images/21.png',
+    tags: ['everything', 'humanity', 'consumer']
+  },
+  {
+    url: 'images/22.png',
+    tags: ['everything', 'humanity', 'consumer']
+  },
+  {
+    url: 'images/23.png',
+    tags: ['everything', 'technology', 'them', 'waste']
+  },
+  {
+    url: 'images/24.png',
+    tags: ['everything', 'consumer', 'technology']
+  },
+  {
+    url: 'images/25.png',
+    tags: ['everything', 'consumer', 'technology']
+  },
+  {
+    url: 'images/26.png',
+    tags: ['everything', 'consumer', 'humanity', 'technology']
+  },
+  {
+    url: 'images/27.png',
+    tags: ['everything', 'them', 'waste', 'beauty']
+  },
+  {
+    url: 'images/28.jpg',
+    tags: ['everything', 'humanity', 'consumer']
+  },
+  {
+    url: 'images/29.png',
+    tags: ['everything', 'innovation', 'technology', 'consumer']
+  },
+  {
+    url: 'images/30.png',
+    tags: ['everything', 'consumer', 'innovation', 'technology']
+  },
+  {
+    url: 'images/31.png',
+    tags: ['everything', 'innovation', 'technology', 'consumer', 'humanity']
+  },
+  {
+    url: 'images/32.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/33.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/34.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/35.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/36.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/37.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/38.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/39.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/40.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/41.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/42.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/43.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/44.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/45.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/46.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/47.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/48.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/49.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/50.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/51.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/52.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/53.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/54.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/55.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/56.gif',
+    tags: ['everything']
+  },
+  {
+    url: 'images/57.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/58.jpg',
+    tags: ['everything']
+  },
+  {
+    url: 'images/59.png',
+    tags: ['everything']
+  },
+  {
+    url: 'images/60.png',
+    tags: ['everything']
+  }
+];
+
+const gallery = $('.gallery');
+
+function showTag(tag) {
+  const filtered = images.filter(function(image) {
+    return image.tags.includes(tag);
+  });
+  
+  filtered.forEach(function(image) {
+    const imgElement = newImage(image);
+    gallery.append(imgElement);
+  })
+}
+
+function newImage(image) {
+  const container = $($('#image-template').text());
+  
+  container
+    .find('img')
+    .attr('src', image.url);
+  
+  image.tags.forEach(function(tag) {
+    const textElement = $('<div class="text"></div>').text(tag);
+    
+    textElement.click(function() {
+      gallery.empty();
+      showTag(tag);
+    });
+    
+    container.find('.middle').append(textElement);
+  });
+  
+  return container;
+}
+
+/***** State Management *******/
+/*
+ * This is where we change state based on the action.
+ * Then, rerender the page based on our current state,
+ * using the tools we built earlier.
+ */
+
+/** Generate Buttons for Tags **/
+
+showTag('everything');
+
+// Get list of unique tags
+const tags = [...new Set([].concat.apply([], images.map(img => img.tags)))];
+
+tags.forEach(function(tag) {
+  const tagButton = $(`<button class="floating-button">${tag}</button>`);
+  
+  tagButton.click(function() {
+    gallery.empty();
+    showTag(tag);
+  });
+  
+  $('.parent').append(tagButton);
+});
+</script>
+</body>
+</html>
